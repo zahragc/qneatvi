@@ -169,7 +169,6 @@ void TextEdit::printText(QString text){
   ansiMatch = ansiExpression.match(text);
   int offset = ansiMatch.capturedStart();
   QString t;
-  // start from 0 , with ofsett string . if -1 all
   t = setDir + text.mid(0, offset);
   cursor.setCharFormat(defaultTextCharFormat);
   cursor.insertText(t);
@@ -180,9 +179,11 @@ void TextEdit::printText(QString text){
     matchEscapeSeq = matchEscapeSeq.remove("m");
     QStringList list = matchEscapeSeq.split(";");
     QListIterator<QString> i(list);
+    i.next();
+    this->parseAnsi(0, i, textCharFormat);
     while (i.hasNext()) {
       bool ok = false;
-      int attribute = i.next().toInt(&ok); // 0 = nothing
+      int attribute = i.next().toInt(&ok);
       Q_ASSERT(ok);
       this->parseAnsi(attribute, i, textCharFormat);
     }
