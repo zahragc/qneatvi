@@ -12,7 +12,7 @@ class ToolBar : public QToolBar
 {
     Q_OBJECT
 public:
-    ToolBar(QWidget *parent = 0);
+    ToolBar(QWidget *parent = nullptr);
 private slots:
   void showAboutQt(void);
   void showAboutNeatvi(void);

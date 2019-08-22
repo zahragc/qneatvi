@@ -20,7 +20,7 @@ private:
     ToolBar * toolbar;
     TextEdit *textEdit;
 public:
-  MainWindow(QWidget *parent = 0);
+  MainWindow(QWidget *parent = nullptr);
   ~MainWindow();
   void moveWindowToCenter(void);
   void createToolBar(void);

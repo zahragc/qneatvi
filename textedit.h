@@ -121,7 +121,7 @@ public:
   void dropEvent(QDropEvent *e);
 
   bool getGuiEvent(){ return guiEvent; }
-private:      //  0         1        2
+private:      //  0         1        2            3
   enum Mode { NormalMode, ExMode, InsertMode, AfterCmdMode };
   QWidget * outputWindow;
   QPlainTextEdit *cmdTextEdit;
@@ -129,7 +129,7 @@ private:      //  0         1        2
   QRegularExpressionMatch ansiMatch;
   QTextCharFormat  const defaultTextCharFormat;
   std::queue<char> input;
-  QString const setDir = QString(QChar(0x202D)); //0x202D
+  QString const setDir = QString(QChar(0x202D)); //0x202D - 'Left-to-right override'
   QEventLoop eventLoop;
   QClipboard *clipboard;
   const QMimeData *mimeData;

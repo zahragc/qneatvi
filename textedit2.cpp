@@ -159,7 +159,7 @@ void TextEdit::nextFunction(void) {
 }
 
 void TextEdit::exeCommand(const QString &command) {
-  QChar c;
+  //QChar c;
   this->activateWindow();
   QByteArray a = command.toUtf8();
   for (int i = 0; i < a.length(); i++)
@@ -168,7 +168,6 @@ void TextEdit::exeCommand(const QString &command) {
 }
 
 void TextEdit::settingFunction(void){
-
     settingDialog->show();
 }
 

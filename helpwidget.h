@@ -7,7 +7,7 @@
 class HelpWidget : public QTabWidget
 {
 public:
-    HelpWidget(QWidget * parent = 0);
+    HelpWidget(QWidget * parent = nullptr);
 private:
     void setTabText(void);
     QScrollArea  confArea;

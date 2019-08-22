@@ -41,6 +41,7 @@ void FindDialog::caseSensitiveFunction(void){
     else if(!caseSensitive && xic == 0)
         caseCommand = ignoreCaseSensitiveCommand;
 }
+
 void FindDialog::getInfo(void){
     caseSensitive = caseCheckBox->isChecked();
     wholeWord = wholeWordCheckBox->isChecked();

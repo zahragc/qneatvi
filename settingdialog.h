@@ -13,7 +13,7 @@
 class SettingDialog : public QDialog
 {
 public:
-    SettingDialog(QWidget * parent = 0);
+    SettingDialog(QWidget * parent = nullptr);
     QSettings * getSettings(void);
 private:
     void initialTextEditSetting(void);

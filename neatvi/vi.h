@@ -209,6 +209,7 @@ extern int xorder;
 extern int xhl;
 extern int xkmap;
 extern int xkmap_alt;
+
 extern char * xlastcommand;
 #ifdef __cplusplus
 }

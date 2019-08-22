@@ -22,7 +22,7 @@ void MainWindow::moveWindowToCenter(void) {
   // QRect screenGeometry = desktopInfo->screenGeometry();
   int screenWidth = desktopInfo->width();
   int screenHeight = desktopInfo->height();
-  resize(screenWidth / 1.7, screenHeight / 1.7);
+  resize(int(screenWidth/1.7), int(screenHeight/1.7));
   move(screenWidth / 4, screenHeight / 10);
 }
 void MainWindow::minimize(void){
